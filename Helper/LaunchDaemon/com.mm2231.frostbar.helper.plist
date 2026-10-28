@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Installed by SMAppService.daemon(plistName:).
+         The Label must equal the helper bundle identifier and the MachServices
+         key; scripts/set_bundle_id.sh rewrites all three together. -->
+    <key>Label</key>
+    <string>com.mm2231.frostbar.helper</string>
+
+    <!-- Path relative to the containing app bundle. launchd resolves it; this
+         process is the only component that runs as root. -->
+    <key>BundleProgram</key>
+    <string>Contents/MacOS/FrostBarHelper</string>
+
+    <key>MachServices</key>
+    <dict>
+        <key>com.mm2231.frostbar.helper</key>
+        <true/>
+    </dict>
+
+    <!-- On-demand: launchd starts the helper when the app first connects. -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>ProcessType</key>
+    <string>Interactive</string>
+
+    <key>AssociatedBundleIdentifiers</key>
+    <array>
+        <string>com.mm2231.frostbar</string>
+    </array>
+</dict>
+</plist>

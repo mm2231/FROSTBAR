@@ -1,0 +1,1192 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		00206AACA1CAD7431C04FBAD = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/State/AppState.swift;
+			sourceTree = "<group>";
+		};
+		02AA312A794E8997AF8B53CC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/OSLogLogger.swift;
+			sourceTree = "<group>";
+		};
+		04B6B4C6F2D4039D4904C389 = {
+			isa = PBXBuildFile;
+			fileRef = 02AA312A794E8997AF8B53CC;
+		};
+		05442AA105236ADCF5CE0040 = {
+			isa = PBXBuildFile;
+			fileRef = D904FE637A6602A9C99164ED;
+		};
+		0615050D04BD2DC4E6CFFAFF = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				baseConfigurationReference = 188BDC112B00A615FE505EDD;
+			};
+			name = Debug;
+		};
+		09DE278A650C3700A7529F7F = {
+			isa = PBXBuildFile;
+			fileRef = 70795471975A362CE08AF343;
+		};
+		0AE02F07C75893DECDB2B7D7 = {
+			isa = PBXGroup;
+			children = (
+				34BE38AC314B8A8D240508D6,
+			);
+			name = LaunchDaemon;
+			sourceTree = "<group>";
+		};
+		10AAEB17620E34CC2063608D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/HelperInstaller.swift;
+			sourceTree = "<group>";
+		};
+		10D912D7BAD6818ABEBF4788 = {
+			isa = PBXGroup;
+			children = (
+				E5B572FF02928C97B870A6A4,
+				A75FA4995FBF2FBD1D760D6A,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		12F9FCFBE81B43522F3F1190 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/Onboarding/OnboardingFlow.swift;
+			sourceTree = "<group>";
+		};
+		157FBC0261277537E3BFD6E4 = {
+			isa = PBXBuildFile;
+			fileRef = 5C2252EB9A108999C3F2D004;
+		};
+		160F915B412290571ED21B91 = {
+			isa = PBXBuildFile;
+			fileRef = 627378CB9BAF2847FD4BBF52;
+		};
+		161A8DE285385895BEF90515 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/WorkspaceAppTrigger.swift;
+			sourceTree = "<group>";
+		};
+		1772726FE9A075255795A050 = {
+			isa = PBXBuildFile;
+			fileRef = 960442E01141E8A3EC07D058;
+		};
+		188BDC112B00A615FE505EDD = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xcconfig;
+			path = Config/App.xcconfig;
+			sourceTree = "<group>";
+		};
+		18E46D6E2E3DE1EA8284285F = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = "docs/adr/0005-smckit.md";
+			sourceTree = "<group>";
+		};
+		1AF312BC41B972AB07995889 = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5236A959CE52AFE1B35B905E;
+			productName = FrostBarCore;
+		};
+		2761849A6D0E26CA4E1817A1 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				baseConfigurationReference = 188BDC112B00A615FE505EDD;
+			};
+			name = Release;
+		};
+		27EFE27E14EFC71DFE50A66E = {
+			isa = PBXBuildFile;
+			fileRef = A75FA4995FBF2FBD1D760D6A;
+		};
+		2B1CF4FC3876B70648FE5DE3 = {
+			isa = PBXBuildFile;
+			fileRef = CB2E224522E0A172525E614C;
+		};
+		2BFFF60ED86AF59E44A31BC2 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0615050D04BD2DC4E6CFFAFF,
+				2761849A6D0E26CA4E1817A1,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E7B7AF9FA7EEA4C364D1F90 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = Config/FrostBar.entitlements;
+			sourceTree = "<group>";
+		};
+		2ED7C6A2CEAD9E91B01DA5C5 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				baseConfigurationReference = B2AB18895581A1158210F2E7;
+			};
+			name = Release;
+		};
+		2F3A6B1E78F896718625FF06 = {
+			isa = PBXGroup;
+			children = (
+				84337AD8D27FCD69AF2C4FC2,
+				C5C1729E2B9E8C0312DDB9DE,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F9D236A7A0BCB9DF029129F = {
+			isa = PBXGroup;
+			children = (
+				D7765DE942351F5F8DC05376,
+			);
+			name = docs;
+			sourceTree = "<group>";
+		};
+		33D052FFCFF273F4C349E779 = {
+			isa = PBXBuildFile;
+			fileRef = 00206AACA1CAD7431C04FBAD;
+		};
+		34BE38AC314B8A8D240508D6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Helper/LaunchDaemon/com.mm2231.frostbar.helper.plist;
+			sourceTree = "<group>";
+		};
+		352FF8A433F3A46EA8547E61 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/MenuBar/MenuBarPanel.swift;
+			sourceTree = "<group>";
+		};
+		379826AF167722E73B143087 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.script.sh;
+			path = scripts/set_bundle_id.sh;
+			sourceTree = "<group>";
+		};
+		3B7114348572296F1FC5DD72 = {
+			isa = PBXBuildFile;
+			productRef = 65BB1ADD49DB2084E05E4C6B;
+		};
+		3BDB54F87671F5FA61C7BE7B = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = "docs/adr/0001-layout.md";
+			sourceTree = "<group>";
+		};
+		3D25A098BF11D90C46632CAF = {
+			isa = PBXBuildFile;
+			fileRef = 12F9FCFBE81B43522F3F1190;
+		};
+		3DDBE60C1202C92153B096B0 = {
+			isa = PBXBuildFile;
+			fileRef = C5C1729E2B9E8C0312DDB9DE;
+			settings = {
+				ATTRIBUTES = (
+					CodeSignOnCopy,
+				);
+			};
+		};
+		4483B56A575DFC82C8F6CC24 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = LICENSE;
+			sourceTree = "<group>";
+		};
+		45423FCD2E3DB7E2028EB54A = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = "docs/adr/0004-bundle-id.md";
+			sourceTree = "<group>";
+		};
+		463921137179F5DDA53CDFE0 = {
+			isa = PBXBuildFile;
+			fileRef = 5BA803E528D582A9D7713E69;
+		};
+		46F2CC38C702A3F0D7638540 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				baseConfigurationReference = B2AB18895581A1158210F2E7;
+			};
+			name = Debug;
+		};
+		46F86FAA6BBF9AC94A7E4595 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					800CF4F1B5C17085B019D9CC = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					E3435DDA2687639586BF0B70 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 479141CF4F7E78536D4D69BF;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 518DA81DB9B99529C0C0AEBE;
+			packageReferences = (
+				5236A959CE52AFE1B35B905E,
+				EE276B491F4BEF092DC3E91A,
+			);
+			productRefGroup = 2F3A6B1E78F896718625FF06;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3435DDA2687639586BF0B70,
+				800CF4F1B5C17085B019D9CC,
+			);
+		};
+		479141CF4F7E78536D4D69BF = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A43692AD8BCEEB8B727C85B,
+				C28449456A5A705A7479770B,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821909E9BF9E73E471FEA84 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61976CDEF19948ECCC442E95,
+				572177C0C066C83958DC312E,
+				FBACFE6DA9772A065789E00F,
+				99D3A01FFA2BE5B8B299262C,
+				09DE278A650C3700A7529F7F,
+				D058E37BD3D57FF4B29490BE,
+				04B6B4C6F2D4039D4904C389,
+				157FBC0261277537E3BFD6E4,
+				80B6C4F44DACC5EE0B8BCB9E,
+				51303FC6F1C916CE413C2A17,
+				05442AA105236ADCF5CE0040,
+				C67B3DD73CD816AEB0AE00D5,
+				33D052FFCFF273F4C349E779,
+				2B1CF4FC3876B70648FE5DE3,
+				68822D40373E5F4975FCAC12,
+				E13EAE7BB8A5A3F88256533D,
+				B3295DA8719270ABA52F258D,
+				3D25A098BF11D90C46632CAF,
+				EC11A1D493CE1A732D5A1EAD,
+				6E51820DF241CBB6EB5DC8DC,
+				909FBDA399930BB7094BAD2E,
+				27EFE27E14EFC71DFE50A66E,
+				463921137179F5DDA53CDFE0,
+				EC3399C44C9073ED3456F4D7,
+				D6291A78D2C43B885F68E333,
+				1772726FE9A075255795A050,
+				5EF12DBA6B24D276D1053628,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A91AF2852BA90E6DF6BC08 = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = "docs/adr/0007-bundle-id.md";
+			sourceTree = "<group>";
+		};
+		4A43692AD8BCEEB8B727C85B = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				baseConfigurationReference = 9040CCD5029571BC172F658B;
+			};
+			name = Debug;
+		};
+		4A4A52C2F2B9D58BAFE326F0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = "docs/adr/0006-helper-owns-writes.md";
+			sourceTree = "<group>";
+		};
+		4B25693F7406FC0876AE6246 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737439F7288E8FAA2E4C5BD5,
+				9DD81114D56CB445CB2618E4,
+				89F8CE0EB8800C4EB8874DFA,
+				657CF45356D44FC2329B8D9D,
+				824685FB1424726C0ED887AC,
+				160F915B412290571ED21B91,
+				B5529FF95E20A9402BAE89B4,
+				F6C203630C3AED49EC38C176,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EFFD1BDB68CEA80E4024525 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/AppDelegate.swift;
+			sourceTree = "<group>";
+		};
+		51303FC6F1C916CE413C2A17 = {
+			isa = PBXBuildFile;
+			fileRef = 4EFFD1BDB68CEA80E4024525;
+		};
+		518DA81DB9B99529C0C0AEBE = {
+			isa = PBXGroup;
+			children = (
+				B9340614599AB78F485950C7,
+				2F3A6B1E78F896718625FF06,
+			);
+			sourceTree = "<group>";
+		};
+		5236A959CE52AFE1B35B905E = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+		53025824C445AF440C5668ED = {
+			isa = PBXBuildFile;
+			productRef = 5BFCFD10D06D4B3A84D6D12C;
+		};
+		5598FBF6CA27727A032D5BC7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/TouchBar/TouchBarRootView.swift;
+			sourceTree = "<group>";
+		};
+		55A38680F5CB3A2704622F14 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Config/HelperInfo.plist;
+			sourceTree = "<group>";
+		};
+		572177C0C066C83958DC312E = {
+			isa = PBXBuildFile;
+			fileRef = D994761F99AE6E17DFDA4FF3;
+		};
+		5BA803E528D582A9D7713E69 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/TouchBar/TouchBarHost.swift;
+			sourceTree = "<group>";
+		};
+		5BFCFD10D06D4B3A84D6D12C = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5236A959CE52AFE1B35B905E;
+			productName = FrostBarSMC;
+		};
+		5C2252EB9A108999C3F2D004 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/SparkleUpdateProvider.swift;
+			sourceTree = "<group>";
+		};
+		5EF12DBA6B24D276D1053628 = {
+			isa = PBXBuildFile;
+			fileRef = B2B07FC96AE4BC33A6C1333D;
+		};
+		61976CDEF19948ECCC442E95 = {
+			isa = PBXBuildFile;
+			fileRef = 9AEC368E9066380DE95F8D50;
+		};
+		627378CB9BAF2847FD4BBF52 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Shared/HelperProtocol/HelperCoding.swift;
+			sourceTree = "<group>";
+		};
+		651F75108636BBC88B2AF994 = {
+			isa = PBXGroup;
+			children = (
+				CB2E224522E0A172525E614C,
+				BA4018DF18B251FBE65BE7E7,
+				D629303C84858D5461F3B913,
+				DE03E6E2572EDB4C114C20C2,
+				CB5F1F7CBB3C408352DD0344,
+				10D912D7BAD6818ABEBF4788,
+				AD49338357772C5CBB9744FF,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		657CF45356D44FC2329B8D9D = {
+			isa = PBXBuildFile;
+			fileRef = B828C2651D87E81A62C455DB;
+		};
+		65BB1ADD49DB2084E05E4C6B = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5236A959CE52AFE1B35B905E;
+			productName = FrostBarModes;
+		};
+		68822D40373E5F4975FCAC12 = {
+			isa = PBXBuildFile;
+			fileRef = D3250E5361B46E1E954D90C5;
+		};
+		689D866AAA42F1B2F154ECEA = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = SECURITY.md;
+			sourceTree = "<group>";
+		};
+		6A388192E7655232EA5C7A47 = {
+			isa = PBXGroup;
+			children = (
+				188BDC112B00A615FE505EDD,
+				BF9989C44F150DB5C5BC0308,
+				2E7B7AF9FA7EEA4C364D1F90,
+				7641DF55DCC7E13C15BF7297,
+				B2AB18895581A1158210F2E7,
+				55A38680F5CB3A2704622F14,
+				9040CCD5029571BC172F658B,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		6A413CE6E0411393571CB617 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/LoginItemService.swift;
+			sourceTree = "<group>";
+		};
+		6B79E2AABDF5FC0C61A09B67 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.script.sh;
+			path = scripts/bump_version.sh;
+			sourceTree = "<group>";
+		};
+		6E51820DF241CBB6EB5DC8DC = {
+			isa = PBXBuildFile;
+			fileRef = 8B9669FDD0F14D469C89A0B3;
+		};
+		6E80BBFFB1A65EA068E48907 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F6E4361B73092A83D4F0B32,
+				F3B11E69E5D4D7AE8CA75773,
+				53025824C445AF440C5668ED,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EFAB1ECC0D092E20FE51FCD = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2D0ECEBF271DBD1E7962B9,
+				3B7114348572296F1FC5DD72,
+				9D73F9533E355DE63E9C5548,
+				AFCF219CB69BF46861FB2A57,
+				E9BA393A1740DC3A000A6660,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70795471975A362CE08AF343 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/HelperSensorProvider.swift;
+			sourceTree = "<group>";
+		};
+		70ADE6EF0377CCA65BC9FFCA = {
+			isa = PBXGroup;
+			children = (
+				7F9EA714204BD8595C77FFF2,
+				6B79E2AABDF5FC0C61A09B67,
+				A219C112487B4B14DE42EFF2,
+				7A7CB946CEDB528E6121B5DB,
+				99D3388D5FAAD61AA54731B8,
+				B3206DC356B14018E07D03F8,
+				379826AF167722E73B143087,
+			);
+			name = scripts;
+			sourceTree = "<group>";
+		};
+		717AA680DF00861F47A6FA44 = {
+			isa = PBXGroup;
+			children = (
+				DB1AF2845DA42A9F7642DF4A,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		737439F7288E8FAA2E4C5BD5 = {
+			isa = PBXBuildFile;
+			fileRef = DBDFF5FBC9075F00EF2D13B9;
+		};
+		7641DF55DCC7E13C15BF7297 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = Config/FrostBarHelper.entitlements;
+			sourceTree = "<group>";
+		};
+		7A7CB946CEDB528E6121B5DB = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.script.python;
+			path = scripts/gen_xcodeproj.py;
+			sourceTree = "<group>";
+		};
+		7DB9CD82C523DECA72AE3696 = {
+			isa = PBXGroup;
+			children = (
+				00206AACA1CAD7431C04FBAD,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		7F9EA714204BD8595C77FFF2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = scripts/ExportOptions.plist;
+			sourceTree = "<group>";
+		};
+		800CF4F1B5C17085B019D9CC = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF3399382BBF43B15B002A5;
+			buildPhases = (
+				4B25693F7406FC0876AE6246,
+				6E80BBFFB1A65EA068E48907,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrostBarHelper;
+			packageProductDependencies = (
+				EC76E2FAF7234AA531707FB7,
+				BF4848C5035207313B6113BD,
+				5BFCFD10D06D4B3A84D6D12C,
+			);
+			productName = FrostBarHelper;
+			productReference = C5C1729E2B9E8C0312DDB9DE;
+			productType = "com.apple.product-type.tool";
+		};
+		80B6C4F44DACC5EE0B8BCB9E = {
+			isa = PBXBuildFile;
+			fileRef = 161A8DE285385895BEF90515;
+		};
+		824685FB1424726C0ED887AC = {
+			isa = PBXBuildFile;
+			fileRef = 9FD08367A1E6197FC51A657D;
+		};
+		82686E6DCEAECB1181E6BCDF = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/FrostBarApp.swift;
+			sourceTree = "<group>";
+		};
+		8287302E368B4C1C94C97D87 = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE276B491F4BEF092DC3E91A;
+			productName = Sparkle;
+		};
+		84337AD8D27FCD69AF2C4FC2 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = FrostBar.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		85FF8EDA1E99BA9F04F77764 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Helper/HelperRPCService.swift;
+			sourceTree = "<group>";
+		};
+		89650E1AE3CE13FE999AA4B1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.yaml;
+			path = .github/workflows/release.yml;
+			sourceTree = "<group>";
+		};
+		89F8CE0EB8800C4EB8874DFA = {
+			isa = PBXBuildFile;
+			fileRef = DE8C267BD12D5B5DACA40B57;
+		};
+		8A2D0ECEBF271DBD1E7962B9 = {
+			isa = PBXBuildFile;
+			productRef = 1AF312BC41B972AB07995889;
+		};
+		8B9669FDD0F14D469C89A0B3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/Panel/ControlPanelWindow.swift;
+			sourceTree = "<group>";
+		};
+		8BCD84AAA30F649EB4E7CA40 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = NOTICE;
+			sourceTree = "<group>";
+		};
+		8F6E4361B73092A83D4F0B32 = {
+			isa = PBXBuildFile;
+			productRef = EC76E2FAF7234AA531707FB7;
+		};
+		9040CCD5029571BC172F658B = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xcconfig;
+			path = Config/Shared.xcconfig;
+			sourceTree = "<group>";
+		};
+		909FBDA399930BB7094BAD2E = {
+			isa = PBXBuildFile;
+			fileRef = E5B572FF02928C97B870A6A4;
+		};
+		960442E01141E8A3EC07D058 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Shared/HelperProtocol/HelperConstants.swift;
+			sourceTree = "<group>";
+		};
+		99D3388D5FAAD61AA54731B8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.script.sh;
+			path = scripts/generate_appcast.sh;
+			sourceTree = "<group>";
+		};
+		99D3A01FFA2BE5B8B299262C = {
+			isa = PBXBuildFile;
+			fileRef = 10AAEB17620E34CC2063608D;
+		};
+		9AEC368E9066380DE95F8D50 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/CapabilityService.swift;
+			sourceTree = "<group>";
+		};
+		9B2EDA994D898BD6F3743159 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/Panel/ControlPanelView.swift;
+			sourceTree = "<group>";
+		};
+		9D73F9533E355DE63E9C5548 = {
+			isa = PBXBuildFile;
+			productRef = C29CDADDCB31B0C2E5A48460;
+		};
+		9DD81114D56CB445CB2618E4 = {
+			isa = PBXBuildFile;
+			fileRef = 85FF8EDA1E99BA9F04F77764;
+		};
+		9FD08367A1E6197FC51A657D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Helper/main.swift;
+			sourceTree = "<group>";
+		};
+		A219C112487B4B14DE42EFF2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.script.sh;
+			path = scripts/check_spdx.sh;
+			sourceTree = "<group>";
+		};
+		A3460D7A577B62941D25F525 = {
+			isa = PBXGroup;
+			children = (
+				4EFFD1BDB68CEA80E4024525,
+				D904FE637A6602A9C99164ED,
+				82686E6DCEAECB1181E6BCDF,
+				B228044D4F9EBF092625113F,
+				7DB9CD82C523DECA72AE3696,
+				651F75108636BBC88B2AF994,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		A41168F808E06266A228BD04 = {
+			isa = PBXGroup;
+			children = (
+				D60863526578EBD31D0E3FDB,
+			);
+			name = .github;
+			sourceTree = "<group>";
+		};
+		A75FA4995FBF2FBD1D760D6A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/Settings/SettingsWindow.swift;
+			sourceTree = "<group>";
+		};
+		ABF3399382BBF43B15B002A5 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F2CC38C702A3F0D7638540,
+				2ED7C6A2CEAD9E91B01DA5C5,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD49338357772C5CBB9744FF = {
+			isa = PBXGroup;
+			children = (
+				5BA803E528D582A9D7713E69,
+				5598FBF6CA27727A032D5BC7,
+			);
+			name = TouchBar;
+			sourceTree = "<group>";
+		};
+		AFCF219CB69BF46861FB2A57 = {
+			isa = PBXBuildFile;
+			productRef = F5CC42181035535D912FEDA0;
+		};
+		B228044D4F9EBF092625113F = {
+			isa = PBXGroup;
+			children = (
+				9AEC368E9066380DE95F8D50,
+				D994761F99AE6E17DFDA4FF3,
+				FF7C1EAF55976C78FF05B956,
+				10AAEB17620E34CC2063608D,
+				70795471975A362CE08AF343,
+				6A413CE6E0411393571CB617,
+				02AA312A794E8997AF8B53CC,
+				5C2252EB9A108999C3F2D004,
+				161A8DE285385895BEF90515,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		B2AB18895581A1158210F2E7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xcconfig;
+			path = Config/Helper.xcconfig;
+			sourceTree = "<group>";
+		};
+		B2B07FC96AE4BC33A6C1333D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Shared/HelperProtocol/HelperEnvelope.swift;
+			sourceTree = "<group>";
+		};
+		B3206DC356B14018E07D03F8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.script.sh;
+			path = scripts/notarize.sh;
+			sourceTree = "<group>";
+		};
+		B3295DA8719270ABA52F258D = {
+			isa = PBXBuildFile;
+			fileRef = 352FF8A433F3A46EA8547E61;
+		};
+		B5529FF95E20A9402BAE89B4 = {
+			isa = PBXBuildFile;
+			fileRef = 960442E01141E8A3EC07D058;
+		};
+		B828C2651D87E81A62C455DB = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Helper/WriteJournal.swift;
+			sourceTree = "<group>";
+		};
+		B9340614599AB78F485950C7 = {
+			isa = PBXGroup;
+			children = (
+				F1830C58D65D094F2D80B2A1,
+				4483B56A575DFC82C8F6CC24,
+				8BCD84AAA30F649EB4E7CA40,
+				FE39F65E2E0D04E61C150B84,
+				F7408FA1AF899F069A48A14E,
+				689D866AAA42F1B2F154ECEA,
+				C6B4C804229F59AF0D56E1F3,
+				A41168F808E06266A228BD04,
+				A3460D7A577B62941D25F525,
+				6A388192E7655232EA5C7A47,
+				F352DC229C97B8CCF9B152D9,
+				717AA680DF00861F47A6FA44,
+				2F9D236A7A0BCB9DF029129F,
+				70ADE6EF0377CCA65BC9FFCA,
+			);
+			name = FrostBar;
+			sourceTree = "<group>";
+		};
+		BA4018DF18B251FBE65BE7E7 = {
+			isa = PBXGroup;
+			children = (
+				D3250E5361B46E1E954D90C5,
+			);
+			name = DesignSystem;
+			sourceTree = "<group>";
+		};
+		BF4848C5035207313B6113BD = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5236A959CE52AFE1B35B905E;
+			productName = FrostBarModes;
+		};
+		BF9989C44F150DB5C5BC0308 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Config/AppInfo.plist;
+			sourceTree = "<group>";
+		};
+		C10E18210F21F74942C1E0F4 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				3DDBE60C1202C92153B096B0,
+			);
+			name = "Embed Helper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28449456A5A705A7479770B = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				baseConfigurationReference = 9040CCD5029571BC172F658B;
+			};
+			name = Release;
+		};
+		C29CDADDCB31B0C2E5A48460 = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5236A959CE52AFE1B35B905E;
+			productName = FrostBarProfiles;
+		};
+		C46BF0C7464AA2A1E48FA7A3 = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Validate release configuration";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\nif [ \"$CONFIGURATION\" = \"Release\" ]; then\n  if [ \"$TEAM_ID\" = \"YOURTEAMID\" ] || [ -z \"$TEAM_ID\" ]; then\n    echo \"error: set TEAM_ID in Team.xcconfig before a release build.\" >&2\n    exit 1\n  fi\n  case \"$SPARKLE_PUBLIC_ED_KEY\" in\n    \"\" | REPLACE_WITH*)\n      echo \"error: set SPARKLE_PUBLIC_ED_KEY in Team.xcconfig before a release build.\" >&2\n      exit 1\n      ;;\n  esac\nfi\n";
+		};
+		C5C1729E2B9E8C0312DDB9DE = {
+			isa = PBXFileReference;
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			path = FrostBarHelper;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C67B3DD73CD816AEB0AE00D5 = {
+			isa = PBXBuildFile;
+			fileRef = 82686E6DCEAECB1181E6BCDF;
+		};
+		C6B4C804229F59AF0D56E1F3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xcconfig;
+			path = Team.xcconfig;
+			sourceTree = "<group>";
+		};
+		CB2E224522E0A172525E614C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/AppActions.swift;
+			sourceTree = "<group>";
+		};
+		CB485B9640E29686700F77FF = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = "docs/adr/0003-fan-stop.md";
+			sourceTree = "<group>";
+		};
+		CB5F1F7CBB3C408352DD0344 = {
+			isa = PBXGroup;
+			children = (
+				9B2EDA994D898BD6F3743159,
+				8B9669FDD0F14D469C89A0B3,
+			);
+			name = Panel;
+			sourceTree = "<group>";
+		};
+		D058E37BD3D57FF4B29490BE = {
+			isa = PBXBuildFile;
+			fileRef = 6A413CE6E0411393571CB617;
+		};
+		D3250E5361B46E1E954D90C5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/DesignSystem/Theme.swift;
+			sourceTree = "<group>";
+		};
+		D60863526578EBD31D0E3FDB = {
+			isa = PBXGroup;
+			children = (
+				F3586FD62E66CBE3100C71C4,
+				89650E1AE3CE13FE999AA4B1,
+			);
+			name = workflows;
+			sourceTree = "<group>";
+		};
+		D6291A78D2C43B885F68E333 = {
+			isa = PBXBuildFile;
+			fileRef = 627378CB9BAF2847FD4BBF52;
+		};
+		D629303C84858D5461F3B913 = {
+			isa = PBXGroup;
+			children = (
+				FDE92D272A4A80864022CEC0,
+				352FF8A433F3A46EA8547E61,
+			);
+			name = MenuBar;
+			sourceTree = "<group>";
+		};
+		D7765DE942351F5F8DC05376 = {
+			isa = PBXGroup;
+			children = (
+				3BDB54F87671F5FA61C7BE7B,
+				D88531AE85A6D86D64653200,
+				CB485B9640E29686700F77FF,
+				45423FCD2E3DB7E2028EB54A,
+				18E46D6E2E3DE1EA8284285F,
+				4A4A52C2F2B9D58BAFE326F0,
+				49A91AF2852BA90E6DF6BC08,
+			);
+			name = adr;
+			sourceTree = "<group>";
+		};
+		D88531AE85A6D86D64653200 = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = "docs/adr/0002-license.md";
+			sourceTree = "<group>";
+		};
+		D904FE637A6602A9C99164ED = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/CompositionRoot.swift;
+			sourceTree = "<group>";
+		};
+		D994761F99AE6E17DFDA4FF3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/HelperClient.swift;
+			sourceTree = "<group>";
+		};
+		DB1AF2845DA42A9F7642DF4A = {
+			isa = PBXGroup;
+			children = (
+				627378CB9BAF2847FD4BBF52,
+				960442E01141E8A3EC07D058,
+				B2B07FC96AE4BC33A6C1333D,
+			);
+			name = HelperProtocol;
+			sourceTree = "<group>";
+		};
+		DBDFF5FBC9075F00EF2D13B9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Helper/ClientAuthenticator.swift;
+			sourceTree = "<group>";
+		};
+		DE03E6E2572EDB4C114C20C2 = {
+			isa = PBXGroup;
+			children = (
+				12F9FCFBE81B43522F3F1190,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		DE8C267BD12D5B5DACA40B57 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Helper/Watchdog.swift;
+			sourceTree = "<group>";
+		};
+		E13EAE7BB8A5A3F88256533D = {
+			isa = PBXBuildFile;
+			fileRef = FDE92D272A4A80864022CEC0;
+		};
+		E3435DDA2687639586BF0B70 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFFF60ED86AF59E44A31BC2;
+			buildPhases = (
+				4821909E9BF9E73E471FEA84,
+				6EFAB1ECC0D092E20FE51FCD,
+				F667297ED3AB90EAC07798D4,
+				C46BF0C7464AA2A1E48FA7A3,
+				C10E18210F21F74942C1E0F4,
+				E54D7E07216BCFB112432061,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB8A8E8E7B50EC69835F9C70,
+			);
+			name = FrostBar;
+			packageProductDependencies = (
+				1AF312BC41B972AB07995889,
+				65BB1ADD49DB2084E05E4C6B,
+				C29CDADDCB31B0C2E5A48460,
+				F5CC42181035535D912FEDA0,
+				8287302E368B4C1C94C97D87,
+			);
+			productName = FrostBar;
+			productReference = 84337AD8D27FCD69AF2C4FC2;
+			productType = "com.apple.product-type.application";
+		};
+		E54D7E07216BCFB112432061 = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy LaunchDaemon plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\nPLIST=\"$(/bin/ls \"$SRCROOT/Helper/LaunchDaemon/\"*.plist | /usr/bin/head -n 1)\"\nDEST=\"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH/Library/LaunchDaemons\"\n/bin/mkdir -p \"$DEST\"\n/bin/cp \"$PLIST\" \"$DEST/\"\n";
+		};
+		E5B572FF02928C97B870A6A4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/Settings/SettingsTabs.swift;
+			sourceTree = "<group>";
+		};
+		E9BA393A1740DC3A000A6660 = {
+			isa = PBXBuildFile;
+			productRef = 8287302E368B4C1C94C97D87;
+		};
+		EB8A8E8E7B50EC69835F9C70 = {
+			isa = PBXTargetDependency;
+			target = 800CF4F1B5C17085B019D9CC;
+			targetProxy = F832FAA38F582B5B942E7D1A;
+		};
+		EC11A1D493CE1A732D5A1EAD = {
+			isa = PBXBuildFile;
+			fileRef = 9B2EDA994D898BD6F3743159;
+		};
+		EC3399C44C9073ED3456F4D7 = {
+			isa = PBXBuildFile;
+			fileRef = 5598FBF6CA27727A032D5BC7;
+		};
+		EC76E2FAF7234AA531707FB7 = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5236A959CE52AFE1B35B905E;
+			productName = FrostBarCore;
+		};
+		EE276B491F4BEF092DC3E91A = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+		F1830C58D65D094F2D80B2A1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = CHANGELOG.md;
+			sourceTree = "<group>";
+		};
+		F352DC229C97B8CCF9B152D9 = {
+			isa = PBXGroup;
+			children = (
+				DBDFF5FBC9075F00EF2D13B9,
+				85FF8EDA1E99BA9F04F77764,
+				DE8C267BD12D5B5DACA40B57,
+				B828C2651D87E81A62C455DB,
+				9FD08367A1E6197FC51A657D,
+				0AE02F07C75893DECDB2B7D7,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		F3586FD62E66CBE3100C71C4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.yaml;
+			path = .github/workflows/ci.yml;
+			sourceTree = "<group>";
+		};
+		F3B11E69E5D4D7AE8CA75773 = {
+			isa = PBXBuildFile;
+			productRef = BF4848C5035207313B6113BD;
+		};
+		F5CC42181035535D912FEDA0 = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5236A959CE52AFE1B35B905E;
+			productName = FrostBarSMC;
+		};
+		F667297ED3AB90EAC07798D4 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C203630C3AED49EC38C176 = {
+			isa = PBXBuildFile;
+			fileRef = B2B07FC96AE4BC33A6C1333D;
+		};
+		F7408FA1AF899F069A48A14E = {
+			isa = PBXFileReference;
+			lastKnownFileType = net.daringfireball.markdown;
+			path = README.md;
+			sourceTree = "<group>";
+		};
+		F832FAA38F582B5B942E7D1A = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = 800CF4F1B5C17085B019D9CC;
+			remoteInfo = FrostBarHelper;
+		};
+		FBACFE6DA9772A065789E00F = {
+			isa = PBXBuildFile;
+			fileRef = FF7C1EAF55976C78FF05B956;
+		};
+		FDE92D272A4A80864022CEC0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/UI/MenuBar/MenuBarLabel.swift;
+			sourceTree = "<group>";
+		};
+		FE39F65E2E0D04E61C150B84 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Package.swift;
+			sourceTree = "<group>";
+		};
+		FF7C1EAF55976C78FF05B956 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = App/Adapters/HelperFanController.swift;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595;
+}

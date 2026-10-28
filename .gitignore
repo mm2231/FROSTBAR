@@ -1,0 +1,12 @@
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcconfig.local
+*.dmg
+*.zip
+!FrostBar.xcodeproj/project.pbxproj
+Releases/

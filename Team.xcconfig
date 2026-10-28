@@ -1,0 +1,23 @@
+// Team.xcconfig
+// The only file a fork normally needs to edit. Run scripts/set_bundle_id.sh
+// if you change the bundle identifiers: the launchd plist and its Label are
+// literals and cannot expand build settings.
+
+TEAM_ID                  = YOURTEAMID
+APP_BUNDLE_ID            = com.mm2231.frostbar
+HELPER_BUNDLE_ID         = $(APP_BUNDLE_ID).helper
+
+MARKETING_VERSION        = 0.1.0
+CURRENT_PROJECT_VERSION  = 1
+
+// Manual signing is required for Developer ID distribution. For a local build
+// without a certificate, use `CODE_SIGN_IDENTITY = -` and
+// `CODE_SIGN_STYLE = Automatic`; launchd will then refuse to register the
+// helper until the app is signed with a real team.
+DEVELOPMENT_TEAM         = $(TEAM_ID)
+CODE_SIGN_STYLE          = Manual
+CODE_SIGN_IDENTITY       = Developer ID Application
+
+// Update feed (Sparkle). Keep HTTPS. See docs/adr/0007-bundle-id.md.
+SPARKLE_FEED_URL          = https://github.com/mm2231/FROSTBAR/releases/latest/download/appcast.xml
+SPARKLE_PUBLIC_ED_KEY     = REPLACE_WITH_YOUR_EDDSA_PUBLIC_KEY

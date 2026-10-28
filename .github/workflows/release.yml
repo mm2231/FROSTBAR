@@ -1,0 +1,118 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to build (for example v0.1.0)
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Sign, notarize and publish
+    runs-on: macos-14
+    environment: release
+    env:
+      APP_BUNDLE_ID: com.mm2231.frostbar
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+          fetch-depth: 0
+
+      - name: Select Xcode
+        run: |
+          if [[ -d /Applications/Xcode_15.2.app ]]; then
+            sudo xcode-select -s /Applications/Xcode_15.2.app
+          elif [[ -d /Applications/Xcode_15.1.app ]]; then
+            sudo xcode-select -s /Applications/Xcode_15.1.app
+          fi
+          xcodebuild -version
+
+      - name: Install Developer ID certificate
+        env:
+          CERTIFICATE_P12: ${{ secrets.DEVELOPER_ID_P12 }}
+          CERTIFICATE_PASSWORD: ${{ secrets.DEVELOPER_ID_P12_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/frostbar-signing.keychain-db"
+          echo "$CERTIFICATE_P12" | base64 --decode > "$RUNNER_TEMP/certificate.p12"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security import "$RUNNER_TEMP/certificate.p12" -k "$KEYCHAIN" \
+            -P "$CERTIFICATE_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s \
+            -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >/dev/null
+          security list-keychains -d user -s "$KEYCHAIN" $(security list-keychains -d user | tr -d '"')
+          rm -f "$RUNNER_TEMP/certificate.p12"
+
+      # Identifiers and the Sparkle public key are public, but they are kept in
+      # repository configuration so a fork cannot accidentally ship FrostBar's.
+      - name: Configure signing and update feed
+        env:
+          TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          SPARKLE_PUBLIC_ED_KEY: ${{ vars.SPARKLE_PUBLIC_ED_KEY }}
+        run: |
+          set -euo pipefail
+          [[ -n "$TEAM_ID" && -n "$SPARKLE_PUBLIC_ED_KEY" ]] || {
+            echo "APPLE_TEAM_ID and SPARKLE_PUBLIC_ED_KEY must be configured"
+            exit 1
+          }
+          ./scripts/set_bundle_id.sh "$APP_BUNDLE_ID" "$TEAM_ID"
+          /usr/bin/sed -i '' -E \
+            "s|^SPARKLE_PUBLIC_ED_KEY[[:space:]]*=.*|SPARKLE_PUBLIC_ED_KEY     = ${SPARKLE_PUBLIC_ED_KEY}|" \
+            Team.xcconfig
+          grep -E '^(TEAM_ID|MARKETING_VERSION|CURRENT_PROJECT_VERSION)' Team.xcconfig
+
+      - name: Notarization credentials
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
+          TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          xcrun notarytool store-credentials FrostBar \
+            --apple-id "$APPLE_ID" --team-id "$TEAM_ID" --password "$NOTARY_PASSWORD"
+
+      - name: Archive, export and notarize
+        run: ./scripts/notarize.sh
+
+      - name: Sparkle appcast
+        env:
+          SPARKLE_ED_PRIVATE_KEY: ${{ secrets.SPARKLE_ED_PRIVATE_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          RELEASE_TAG: ${{ env.TAG }}
+        run: |
+          set -euo pipefail
+          KEY="$RUNNER_TEMP/sparkle-ed-key.txt"
+          printf '%s' "$SPARKLE_ED_PRIVATE_KEY" > "$KEY"
+          chmod 600 "$KEY"
+          SPARKLE_ED_KEY_FILE="$KEY" ./scripts/generate_appcast.sh build/artifacts
+          rm -f "$KEY"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          VERSION="${TAG#v}"
+          gh release view "$TAG" >/dev/null 2>&1 || \
+            gh release create "$TAG" --title "FrostBar $VERSION" --notes-file - <<'EOF'
+          See CHANGELOG.md for the changes in this release.
+          EOF
+          gh release upload "$TAG" \
+            "build/artifacts/FrostBar-$VERSION.zip" \
+            "build/artifacts/FrostBar-$VERSION.zip.sha256" \
+            build/artifacts/appcast.xml \
+            --clobber
+
+      - name: Remove signing keychain
+        if: always()
+        run: security delete-keychain "$RUNNER_TEMP/frostbar-signing.keychain-db" || true

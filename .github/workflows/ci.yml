@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  domain:
+    name: Domain tests (no Xcode project)
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Swift version
+        run: swift --version
+
+      - name: SPDX headers
+        run: ./scripts/check_spdx.sh
+
+      - name: Generated project is current
+        run: python3 scripts/gen_xcodeproj.py --check
+
+      - name: swift test
+        run: swift test
+
+  app:
+    name: App and helper build
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          if [[ -d /Applications/Xcode_15.2.app ]]; then
+            sudo xcode-select -s /Applications/Xcode_15.2.app
+          elif [[ -d /Applications/Xcode_15.1.app ]]; then
+            sudo xcode-select -s /Applications/Xcode_15.1.app
+          fi
+          xcodebuild -version
+
+      # Signing is disabled: this job only proves that both targets compile and
+      # that the launch daemon lands in the bundle. Release signing is covered
+      # by release.yml.
+      - name: Build FrostBar.app
+        run: |
+          xcodebuild \
+            -project FrostBar.xcodeproj \
+            -scheme FrostBar \
+            -configuration Debug \
+            -destination 'generic/platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            build
+
+      - name: Check bundle layout
+        run: |
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -name FrostBar.app -type d -path '*Build/Products/Debug/*' | head -n 1)
+          test -n "$APP" || { echo "FrostBar.app not found"; exit 1; }
+          test -x "$APP/Contents/MacOS/FrostBarHelper" || { echo "helper was not embedded"; exit 1; }
+          ls "$APP/Contents/Library/LaunchDaemons/"*.plist

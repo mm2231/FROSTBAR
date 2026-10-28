@@ -1,0 +1,23 @@
+FrostBar
+Copyright (C) 2026 mm2231 and FrostBar contributors
+Licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later).
+See LICENSE for the full text.
+
+This product includes third-party software:
+
+1. SMCKit
+   Copyright (c) 2014-2017 beltex <https://github.com/beltex>
+   License: MIT
+   Vendored under Vendored/SMCKit, adapted for Swift 5 and FrostBar's needs.
+   Original license text: Vendored/SMCKit/LICENSE
+   Documented changes: Vendored/SMCKit/PATCHES.md
+
+2. Sparkle
+   Copyright (c) 2006-2026 Sparkle Project contributors
+   License: MIT (plus the licenses of bundled components shipped inside
+   Sparkle.framework, see the framework's own LICENSE files)
+   Linked as a binary framework, unmodified.
+   https://github.com/sparkle-project/Sparkle
+
+MIT is compatible with GPL-3.0-or-later. The MIT notices above must be
+preserved in source and binary distributions of FrostBar.

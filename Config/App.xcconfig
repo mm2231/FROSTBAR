@@ -1,0 +1,11 @@
+// App.xcconfig
+#include "../Team.xcconfig"
+#include "Shared.xcconfig"
+
+PRODUCT_NAME = FrostBar
+PRODUCT_BUNDLE_IDENTIFIER = $(APP_BUNDLE_ID)
+INFOPLIST_FILE = Config/AppInfo.plist
+CODE_SIGN_ENTITLEMENTS = Config/FrostBar.entitlements
+GENERATE_INFOPLIST_FILE = NO
+COMBINE_HIDPI_IMAGES = YES
+ENABLE_PREVIEWS = YES

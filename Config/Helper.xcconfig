@@ -1,0 +1,11 @@
+// Helper.xcconfig
+#include "../Team.xcconfig"
+#include "Shared.xcconfig"
+
+PRODUCT_NAME = FrostBarHelper
+PRODUCT_BUNDLE_IDENTIFIER = $(HELPER_BUNDLE_ID)
+INFOPLIST_FILE = Config/HelperInfo.plist
+CODE_SIGN_ENTITLEMENTS = Config/FrostBarHelper.entitlements
+GENERATE_INFOPLIST_FILE = NO
+SKIP_INSTALL = YES
+ENABLE_PREVIEWS = NO
